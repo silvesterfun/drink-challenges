@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zufallsaufgaben Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+        h1 {
+            color: #333;
+        }
+        .task {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        button {
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Zufallsaufgaben Generator</h1>
+        <p class="task" id="task">Klicke auf den Button, um eine Aufgabe zu starten!</p>
+        <button onclick="generateTask()">Neue Aufgabe anzeigen</button>
+    </div>
+
+    <script>
+        const tasks = [
+            "Trinke dein Getränk auf Ex.",
+            "Trinke 10 Shots.",
+            "Mache einen Oben-Ohne-Selfie.",
+            "Finde etwas Essbares im Garten und verzehre es.",
+            "Tanze zu Cotton Eye Joe in voller Lautstärke.",
+            "Erfinde ein neues Wort und erkläre seine Bedeutung.",
+            "Mache 20 Kniebeugen.",
+            "Balanciere einen Becher auf deinem Kopf.",
+            "Fasse deinen Nachbarn an der Schulter und gestehe deine Liebe.",
+            "Starte ein Luftgitarren-Solo!",
+            "Gönn dir einen Schluck aus jedem Glas der Runde.",
+            "Gib allen einen Superheldennamen.",
+            "Tausche deinen Platz mit jemand anderem.",
+            "Stell ein Tier pantomimisch dar.",
+            "Mach ein Selfie mit der Person, die du am wenigsten kennst.",
+            "Balanciere einen Löffel auf deiner Stirn.",
+            "Beschwere dich lautstark über die Inneneinrichtung!",
+            "Spiele ein Roboter-Tanz für 30 Sekunden.",
+            "Rufe eine Nummer an und erzähle von deinem Alkoholproblem.",
+            "Erzähle 3 Fakten über dich, von denen 1 gelogen ist."
+        ];
+
+        function generateTask() {
+            const randomIndex = Math.floor(Math.random() * tasks.length);
+            document.getElementById("task").textContent = tasks[randomIndex];
+        }
+    </script>
+</body>
+</html>
