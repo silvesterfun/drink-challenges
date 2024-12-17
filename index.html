@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fun Generator</title>
+    <title>Zufallsaufgaben Generator</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -38,6 +38,18 @@
             font-size: 1.2em;
             color: red;
             margin: 10px 0;
+            display: none; /* Versteckt, bis Timer relevant ist */
+        }
+        .icon-button {
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            margin: 5px;
+            transition: color 0.3s;
+        }
+        .icon-button:hover {
+            color: #007BFF;
         }
         button {
             background: #007BFF;
@@ -57,18 +69,19 @@
 </head>
 <body>
     <div class="container">
-        <div class="title" id="title">Fun Generator</div>
-        <p class="task" id="task">Hier wird die Aufgabe angezeigt.</p>
+        <div class="title" id="title">Gleich geht's los!</div>
+        <p class="task" id="task"></p>
         <p id="timer"></p>
-        <button onclick="generateTask()">Neue Aufgabe anzeigen</button>
-        <button onclick="startTimerManually()">Timer starten</button>
-        <button onclick="pauseTimer()">Timer pausieren</button>
+        <button onclick="generateTask()">Neue Aufgabe</button>
+        <button class="icon-button" onclick="toggleTimer()" id="timerControl">⏯</button>
     </div>
 
     <script>
         let timerInterval;
         let remainingTime = 0;
         let isPaused = false;
+        const timerElement = document.getElementById("timer");
+        const timerControl = document.getElementById("timerControl");
 
         async function fetchTasks() {
             const response = await fetch('tasks.json');
@@ -77,41 +90,44 @@
 
         function startTimer(seconds) {
             clearInterval(timerInterval); // Vorherigen Timer löschen
-            const timerElement = document.getElementById("timer");
             remainingTime = seconds;
             isPaused = false;
-            timerElement.textContent = `Zeit: ${remainingTime} Sekunden`;
+            timerElement.style.display = "block"; // Timer sichtbar machen
+            updateTimerDisplay();
+            timerControl.textContent = "⏸";
 
             timerInterval = setInterval(() => {
                 if (!isPaused) {
                     remainingTime--;
-                    timerElement.textContent = `Zeit: ${remainingTime} Sekunden`;
+                    updateTimerDisplay();
 
                     if (remainingTime <= 0) {
                         clearInterval(timerInterval);
                         timerElement.textContent = "Zeit abgelaufen!";
+                        timerControl.style.display = "none";
                     }
                 }
             }, 1000);
         }
 
-        function startTimerManually() {
-            if (remainingTime > 0) {
-                startTimer(remainingTime);
-            } else {
-                document.getElementById("timer").textContent = "Kein Timer gesetzt.";
-            }
+        function updateTimerDisplay() {
+            timerElement.textContent = `Zeit: ${remainingTime} Sekunden`;
         }
 
-        function pauseTimer() {
-            isPaused = !isPaused;
+        function toggleTimer() {
+            if (remainingTime > 0) {
+                isPaused = !isPaused;
+                timerControl.textContent = isPaused ? "▶" : "⏸";
+            }
         }
 
         async function generateTask() {
             clearInterval(timerInterval); // Timer zurücksetzen
             isPaused = false;
             remainingTime = 0;
-            document.getElementById("timer").textContent = "";
+            timerElement.textContent = "";
+            timerElement.style.display = "none"; // Timer verstecken
+            timerControl.style.display = "none";
 
             const tasks = await fetchTasks();
             const randomIndex = Math.floor(Math.random() * tasks.length);
@@ -121,8 +137,8 @@
             document.getElementById("task").textContent = selectedTask.task;
 
             if (selectedTask.timer) {
-                remainingTime = selectedTask.timer;
-                document.getElementById("timer").textContent = `Zeit: ${remainingTime} Sekunden`;
+                startTimer(selectedTask.timer);
+                timerControl.style.display = "inline-block"; // Timer-Steuerung anzeigen
             }
         }
     </script>
