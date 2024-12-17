@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zufallsaufgaben Generator</title>
+    <title>Spielspass mit Aufgaben</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -24,9 +24,20 @@
         h1 {
             color: #333;
         }
+        .title {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin: 20px 0 10px 0;
+        }
         .task {
-            font-size: 1.5em;
-            margin: 20px 0;
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #555;
+        }
+        #timer {
+            font-size: 1.2em;
+            color: red;
+            margin: 10px 0;
         }
         button {
             background: #007BFF;
@@ -45,21 +56,50 @@
 </head>
 <body>
     <div class="container">
-        <h1>Zufallsaufgaben Generator</h1>
-        <p class="task" id="task">Klicke auf den Button, um eine Aufgabe zu starten!</p>
-        <button onclick="generateTask()">Neue Aufgabe anzeigen</button>
+        <h1>Fun Generator</h1>
+        <div class="title" id="title">Klicke auf den Button, um einen Titel zu starten!</div>
+        <p class="task" id="task">Hier wird die Aufgabe angezeigt.</p>
+        <p id="timer"></p>
+        <button onclick="generateTask()">Los geht's</button>
     </div>
 
     <script>
+        let timerInterval;
+
         async function fetchTasks() {
             const response = await fetch('tasks.json');
             return response.json();
         }
 
+        function startTimer(seconds) {
+            clearInterval(timerInterval); // Vorherigen Timer löschen
+            const timerElement = document.getElementById("timer");
+            timerElement.textContent = `Zeit: ${seconds} Sekunden`;
+
+            timerInterval = setInterval(() => {
+                seconds--;
+                timerElement.textContent = `Zeit: ${seconds} Sekunden`;
+
+                if (seconds <= 0) {
+                    clearInterval(timerInterval);
+                    timerElement.textContent = "Zeit abgelaufen!";
+                }
+            }, 1000);
+        }
+
         async function generateTask() {
             const tasks = await fetchTasks();
             const randomIndex = Math.floor(Math.random() * tasks.length);
-            document.getElementById("task").textContent = tasks[randomIndex];
+            const selectedTask = tasks[randomIndex];
+
+            document.getElementById("title").textContent = selectedTask.title;
+            document.getElementById("task").textContent = selectedTask.task;
+
+            if (selectedTask.timer) {
+                startTimer(selectedTask.timer);
+            } else {
+                document.getElementById("timer").textContent = ""; // Timer-Bereich leeren
+            }
         }
     </script>
 </body>
