@@ -59,6 +59,5 @@ Falls du das Projekt lokal starten möchtest:
 
 🎉 Viel Spaß mit **Drink Challenges**! Prost und gute Unterhaltung! 🍻
 
-```
 
 
