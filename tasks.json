@@ -633,8 +633,12 @@
         "timer": 20
     },
     {
-    "title": "LOL-Challenge", 
-    "task": "Niemand darf lachen! Für 5 Minuten gilt ein striktes Lachverbot. Wer lacht, muss einen Schluck trinken.", 
-    "timer": 300
+        "title": "LOL-Challenge",
+        "task": "Niemand darf lachen! Für 5 Minuten gilt ein striktes Lachverbot. Wer lacht, muss einen Schluck trinken.",
+        "timer": 300
+    },
+    {
+        "title": "Vogelmutti",
+        "task": "Nimm einen kleinen Snack in den Mund und gib ihn der Person links neben dir weiter – ohne Hände!"
     }
 ]
