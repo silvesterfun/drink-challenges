@@ -40,17 +40,25 @@
             margin: 10px 0;
             display: none; /* Versteckt, bis Timer relevant ist */
         }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
         .icon-button {
-            background: none;
+            background: #007BFF;
             border: none;
-            font-size: 1.5em;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
             cursor: pointer;
-            margin: 5px;
-            color: #007BFF; /* Sichtbar bei Bedarf */
-            transition: color 0.3s;
+            transition: background 0.3s;
         }
         .icon-button:hover {
-            color: #0056b3;
+            background: #0056b3;
         }
         button {
             background: #007BFF;
@@ -60,7 +68,6 @@
             border-radius: 5px;
             font-size: 1em;
             cursor: pointer;
-            margin: 5px;
             transition: background 0.3s;
         }
         button:hover {
@@ -74,8 +81,10 @@
         <div class="title" id="title">Gleich geht's los!</div>
         <p class="task" id="task"></p>
         <p id="timer"></p>
-        <button onclick="generateTask()">Neue Aufgabe</button>
-        <button class="icon-button" onclick="toggleTimer()" id="timerControl" style="display: none;">⏯</button>
+        <div class="button-container">
+            <button onclick="generateTask()">Neue Aufgabe</button>
+            <button class="icon-button" onclick="toggleTimer()" id="timerControl" style="display: none;">⏯</button>
+        </div>
     </div>
 
     <script>
@@ -123,6 +132,7 @@
 
         function hideTimerControls() {
             clearInterval(timerInterval);
+            timerInterval = null; // Sicherstellen, dass kein Timer mehr läuft
             timerElement.style.display = "none";
             timerControl.style.display = "none";
         }
