@@ -1,90 +1,496 @@
 [
-    { "title": "End-game-crisis", "task": "Trinke dein Getränk auf Ex." },
-    { "title": "10 Shot Karte", "task": "Trinke 10 Shots." },
-    { "title": "WTF Karte", "task": "Trinke einen Shot zur Wiederherstellung des Normalzustands." },
-    { "title": "Wahrheiten", "task": "Wirf eine Wahrheit in die Runde." },
-    { "title": "Epidemie", "task": "Desinfiziere die Getränke der Mitspieler mit 2cl Shots." },
-    { "title": "Komplett im Arsch", "task": "Setze zur Sicherheit eine Runde aus." },
-    { "title": "Frauen, Kinder und Menschen", "task": "Alle leeren ihr Getränk bis du wieder dran bist." },
-    { "title": "Penis", "task": "Schreie „Penis“ lauter als deine Nachbarn; der Leisere trinkt einen Shot." },
-    { "title": "Der Messiahs", "task": "Preise den Messiahs." },
-    { "title": "Martini Boi", "task": "Nutze deine Hose als Cape zur Gerechtigkeit." },
-    { "title": "3facher Witz", "task": "Erzähle einen Witz und wiederhole ihn zwei Runden lang." },
-    { "title": "Fusion", "task": "Mische die Getränke deiner beiden Nachbarn zu einem Superdrink und gönne ihn dir gleich." },
-    { "title": "Game of Tag", "task": "Fange die Mitspieler ein; die ersten beiden trinken einen Shot." },
-    { "title": "Weihnachtsbäckerei", "task": "Verschenke Shots an die Braven." },
-    { "title": "Weihnachtsbesinnungsabend", "task": "Wünsch allen frohe Weihnachten und trinke darauf." },
-    { "title": "Vin Diesel", "task": "Präsentiere deine Muskeln, zieh die Hose dafür aus." },
-    { "title": "Feng-Shui", "task": "Beschwere dich lautstark über die Inneneinrichtung." },
-    { "title": "Sexy Cousine", "task": "Lege dich eine Runde lang auf den Bauch." },
-    { "title": "Mama calling", "task": "Ignoriere dein Handy und rufe am Ende des Spiels deine Mama an." },
-    { "title": "Die irre Heldentour des Billy Lynn", "task": "Gestehe deinen Mitspielern deine Liebe zu ihnen." },
-    { "title": "Spielefehler", "task": "Keine Strafe." },
-    { "title": "Bedienfehler", "task": "Trinke einen Shot." },
-    { "title": "Letzte U-Bahn", "task": "Leere dein Getränk in 3 Minuten.", "timer": 180 },
-    { "title": "Shotgun", "task": "Verteile einen Shot, auch wenn du verloren hast." },
-    { "title": "AWP", "task": "Setze eine Runde aus und beobachte die anderen ganz genau." },
-    { "title": "Terraforming", "task": "Mische dein Getränk mit 2cl Ethanol." },
-    { "title": "Zieh Zwei Karte", "task": "Der nächste Spieler darf 2x klicken." },
-    { "title": "Farbwahlkarte", "task": "Wie lautet deine Lieblingsfarbe?" },
-    { "title": "Fairer Sieg", "task": "Trinke einen Gewinner-Schluck, aber spielt weiter." },
-    { "title": "Selfie-Time", "task": "Mache einen Oben-Ohne-Selfie." },
-    { "title": "Kraftprotz", "task": "Mache 10 Liegestütze." },
-    { "title": "Flitzer-Alarm", "task": "Renne einmal um deine Hütte.", "timer": 60 },
-    { "title": "Durchhaltevermögen", "task": "Stehe 10 Minuten lang.", "timer": 600 },
-    { "title": "Insektenjäger", "task": "Fange ein Insekt (falls nicht möglich: Austrinken)." },
-    { "title": "Cotton Eye Joe", "task": "Tanze zu Cotton Eye Joe in voller Lautstärke.", "timer": 120 },
-    { "title": "Naturbursche", "task": "Finde und verzehre etwas Essbares aus dem Garten." },
-    { "title": "Religionswechsel", "task": "Setze ein Nudelsieb zu Ehren des fliegenden Spaghettimonsters auf." },
-    { "title": "Illegale Aktion", "task": "Mach etwas „Gangsterhaftes“ (aber nichts Illegales!)." },
-    { "title": "Gläser-Party", "task": "Trinke einen Schluck aus jedem Glas der Runde." },
-    { "title": "Nichtraucher", "task": "Ab jetzt gilt Rauchverbot; jede Zigarette zählt als Schummeln." },
-    { "title": "Steinzeit-Überleben", "task": "Dein Handy ist für die Runde ein Stein und darf nicht bewegt werden." },
-    { "title": "Sockenfreund Fridolin", "task": "Deine Socke spricht ab sofort für dich." },
-    { "title": "Team-Shot", "task": "Gönn dir und einem Freund einen Schnaps." },
-    { "title": "Tischkriecher", "task": "Kriech unter den Tisch, bis dein Getränk leer ist." },
-    { "title": "Planänderung", "task": "Die Aufgabe des nächsten Spielers erledigst doch du." },
-    { "title": "Luftgitarren-Solo", "task": "Spiele ein episches Luftgitarren-Solo für 30 Sekunden.", "timer": 30 },
-    { "title": "Reverse-Drink", "task": "Trinke dein Getränk mit gekreuzten Armen." },
-    { "title": "Mikrofon-Meister", "task": "Rappt oder singt spontan 4 Zeilen." },
-    { "title": "Fitnesspause", "task": "Mache 20 Kniebeugen." },
-    { "title": "Becher-Balance", "task": "Balanciere einen Becher 10 Sekunden lang auf deinem Kopf.", "timer": 10 },
-    { "title": "Namenkette", "task": "Nenne 2 Personen aus der Runde rückwärts." },
-    { "title": "Freestyle-Dichter", "task": "Reime spontan zu einem Thema, das die Gruppe wählt." },
-    { "title": "Spaghetti-Macher", "task": "Leg eine rohe Nudel (Form deiner Wahl) in ein Getränk und lass es drinnen." },
-    { "title": "Schluck für die Gruppe", "task": "Jeder nimmt einen Schluck, natürlich außer dir." },
-    { "title": "Truth or Dare", "task": "Stelle einer Person eine Frage oder fordere sie zu etwas auf." },
-    { "title": "Selfie-Streit", "task": "Mache ein Selfie mit der Person, die du am wenigsten kennst." },
-    { "title": "Koch-Tutorial", "task": "Erkläre, wie man Nudeln mit Pesto zubereitet – Schritt für Schritt." },
-    { "title": "Mumien-Spiel", "task": "Lasse dich mit Klopapier einwickeln." },
-    { "title": "Superheld-Name", "task": "Gib allen Anwesenden einen Superheldennamen." },
-    { "title": "Eiskalter Shot", "task": "Trinke draußen einen Shot." },
-    { "title": "Hände Hoch", "task": "Bleibe mit beiden Armen 5 Minuten lang oben.", "timer": 300 },
-    { "title": "Bier-Meditation", "task": "Starre meditativ 1 Minute lang auf dein Getränk.", "timer": 60 },
-    { "title": "Tier-Party", "task": "Mach das Geräusch deines Lieblingstiers." },
-    { "title": "Sitzverbot", "task": "Stehe für die nächsten 5 Minuten.", "timer": 300 },
-    { "title": "Gruppenanführer", "task": "Leite die Gruppe für 2 Minuten bei Sportübungen an.", "timer": 120 },
-    { "title": "Würfelwurf", "task": "Würfle: Gerade Zahl = du trinkst, ungerade Zahl = die anderen trinken." },
-    { "title": "Zeitschätz-Spiel", "task": "Schätze 1 Minute ohne Uhr.", "timer": 60 },
-    { "title": "Rückwärts sprechen", "task": "Sage „Ich liebe dieses Spiel“ rückwärts." },
-    { "title": "Hütchenspiel", "task": "Verstecke einen Gegenstand im Raum; die Gruppe muss suchen." },
-    { "title": "Monsterstimme", "task": "Sprich wie ein Monster für die nächsten 2 Runden.", "timer": 120 },
-    { "title": "Schluck in Ehren", "task": "Trinke aus einem Glas deiner Wahl." },
-    { "title": "Versteck-Spiel", "task": "Verstecke dich für 1 Minute im Raum.", "timer": 60 },
-    { "title": "Pantomime-Profi", "task": "Stelle ein bekanntes Tier pantomimisch dar." },
-    { "title": "Lieblingssong-Show", "task": "Singe den Refrain deines Lieblingsliedes laut vor." },
-    { "title": "Witziger Tänzer", "task": "Tanze wie ein Roboter für 30 Sekunden.", "timer": 30 },
-    { "title": "Mund-Zeichner", "task": "Zeichne mit deinem Mund einen Smiley auf ein Stück Papier." },
-    { "title": "Prost-Künstler", "task": "Sage „Prost“ auf 5 verschiedene Arten." },
-    { "title": "Buddy-System", "task": "Umarme jemanden in der Runde für 10 Sekunden.", "timer": 10 },
-    { "title": "Bauchredner", "task": "Sprich, ohne dabei die Lippen zu bewegen." },
-    { "title": "Löffeltanz", "task": "Halte einen Löffel zwischen deinen Zähnen und tanze." },
-    { "title": "Erfinder-Modus", "task": "Erfinde ein neues Wort und erkläre, was es bedeutet." },
-    { "title": "Gruppen-DJ", "task": "Lege ein Lied ein und tanze dazu." },
-    { "title": "Postkarten-Spiel", "task": "Beschreibe spontan einen Urlaub von dir." },
-    { "title": "Kopfdreh-Challenge", "task": "Drehe deinen Kopf komplett im Kreis – langsam." },
-    { "title": "Bananentelefon", "task": "Telefoniere eine Minute lang mit einer Banane bzw. Obst deiner Wahl.", "timer": 60 },
-    { "title": "Schlürf-Challenge", "task": "Trinke dein Getränk so laut wie möglich." },
-    { "title": "Platzwechsel", "task": "Tausche deinen Platz mit einer Person." },
-    { "title": "Gruppenfoto", "task": "Macht zusammen ein Gruppenfoto und postet es später als Erinnerung." }
+    {
+        "title": "End-game-crisis",
+        "task": "Trinke dein Getränk auf Ex."
+    },
+    {
+        "title": "10 Shot Karte",
+        "task": "Trinke 10 Shots."
+    },
+    {
+        "title": "WTF Karte",
+        "task": "Trinke einen Shot zur Wiederherstellung des Normalzustands."
+    },
+    {
+        "title": "Wahrheiten",
+        "task": "Wirf eine Wahrheit in die Runde."
+    },
+    {
+        "title": "Epidemie",
+        "task": "Desinfiziere die Getränke der Mitspieler mit 2cl Shots."
+    },
+    {
+        "title": "Komplett im Arsch",
+        "task": "Setze zur Sicherheit eine Runde aus."
+    },
+    {
+        "title": "Frauen, Kinder und Menschen",
+        "task": "Alle leeren ihr Getränk bis du wieder dran bist."
+    },
+    {
+        "title": "Penis",
+        "task": "Schreie „Penis“ lauter als deine Nachbarn; der Leisere trinkt einen Shot."
+    },
+    {
+        "title": "Der Messiahs",
+        "task": "Preise den Messiahs."
+    },
+    {
+        "title": "Martini Boi",
+        "task": "Nutze deine Hose als Cape zur Gerechtigkeit."
+    },
+    {
+        "title": "3facher Witz",
+        "task": "Erzähle einen Witz und wiederhole ihn zwei Runden lang."
+    },
+    {
+        "title": "Fusion",
+        "task": "Mische die Getränke deiner beiden Nachbarn zu einem Superdrink und gönne ihn dir gleich."
+    },
+    {
+        "title": "Game of Tag",
+        "task": "Fange die Mitspieler ein; die ersten beiden trinken einen Shot."
+    },
+    {
+        "title": "Weihnachtsbäckerei",
+        "task": "Verschenke Shots an die Braven."
+    },
+    {
+        "title": "Weihnachtsbesinnungsabend",
+        "task": "Wünsch allen frohe Weihnachten und trinke darauf."
+    },
+    {
+        "title": "Vin Diesel",
+        "task": "Präsentiere deine Muskeln, zieh die Hose dafür aus."
+    },
+    {
+        "title": "Feng-Shui",
+        "task": "Beschwere dich lautstark über die Inneneinrichtung."
+    },
+    {
+        "title": "Sexy Cousine",
+        "task": "Lege dich eine Runde lang auf den Bauch."
+    },
+    {
+        "title": "Mama calling",
+        "task": "Ignoriere dein Handy und rufe am Ende des Spiels deine Mama an."
+    },
+    {
+        "title": "Die irre Heldentour des Billy Lynn",
+        "task": "Gestehe deinen Mitspielern deine Liebe zu ihnen."
+    },
+    {
+        "title": "Spielefehler",
+        "task": "Keine Strafe."
+    },
+    {
+        "title": "Bedienfehler",
+        "task": "Trinke einen Shot."
+    },
+    {
+        "title": "Letzte U-Bahn",
+        "task": "Leere dein Getränk in 3 Minuten.",
+        "timer": 180
+    },
+    {
+        "title": "Shotgun",
+        "task": "Verteile einen Shot, auch wenn du verloren hast."
+    },
+    {
+        "title": "AWP",
+        "task": "Setze eine Runde aus und beobachte die anderen ganz genau."
+    },
+    {
+        "title": "Terraforming",
+        "task": "Mische dein Getränk mit 2cl Ethanol."
+    },
+    {
+        "title": "Zieh Zwei Karte",
+        "task": "Der nächste Spieler darf 2x klicken."
+    },
+    {
+        "title": "Farbwahlkarte",
+        "task": "Wie lautet deine Lieblingsfarbe?"
+    },
+    {
+        "title": "Fairer Sieg",
+        "task": "Trinke einen Gewinner-Schluck, aber spielt weiter."
+    },
+    {
+        "title": "Selfie-Time",
+        "task": "Mache einen Oben-Ohne-Selfie."
+    },
+    {
+        "title": "Kraftprotz",
+        "task": "Mache 10 Liegestütze."
+    },
+    {
+        "title": "Flitzer-Alarm",
+        "task": "Renne einmal um deine Hütte.",
+        "timer": 60
+    },
+    {
+        "title": "Durchhaltevermögen",
+        "task": "Stehe 10 Minuten lang.",
+        "timer": 600
+    },
+    {
+        "title": "Insektenjäger",
+        "task": "Fange ein Insekt (falls nicht möglich: Austrinken)."
+    },
+    {
+        "title": "Cotton Eye Joe",
+        "task": "Tanze zu Cotton Eye Joe in voller Lautstärke.",
+        "timer": 120
+    },
+    {
+        "title": "Naturbursche",
+        "task": "Finde und verzehre etwas Essbares aus dem Garten."
+    },
+    {
+        "title": "Religionswechsel",
+        "task": "Setze ein Nudelsieb zu Ehren des fliegenden Spaghettimonsters auf."
+    },
+    {
+        "title": "Illegale Aktion",
+        "task": "Mach etwas „Gangsterhaftes“ (aber nichts Illegales!)."
+    },
+    {
+        "title": "Gläser-Party",
+        "task": "Trinke einen Schluck aus jedem Glas der Runde."
+    },
+    {
+        "title": "Nichtraucher",
+        "task": "Ab jetzt gilt Rauchverbot; jede Zigarette zählt als Schummeln."
+    },
+    {
+        "title": "Steinzeit-Überleben",
+        "task": "Dein Handy ist für die Runde ein Stein und darf nicht bewegt werden."
+    },
+    {
+        "title": "Sockenfreund Fridolin",
+        "task": "Deine Socke spricht ab sofort für dich."
+    },
+    {
+        "title": "Team-Shot",
+        "task": "Gönn dir und einem Freund einen Schnaps."
+    },
+    {
+        "title": "Tischkriecher",
+        "task": "Kriech unter den Tisch, bis dein Getränk leer ist."
+    },
+    {
+        "title": "Planänderung",
+        "task": "Die Aufgabe des nächsten Spielers erledigst doch du."
+    },
+    {
+        "title": "Luftgitarren-Solo",
+        "task": "Spiele ein episches Luftgitarren-Solo für 30 Sekunden.",
+        "timer": 30
+    },
+    {
+        "title": "Reverse-Drink",
+        "task": "Trinke dein Getränk mit gekreuzten Armen."
+    },
+    {
+        "title": "Mikrofon-Meister",
+        "task": "Rappt oder singt spontan 4 Zeilen."
+    },
+    {
+        "title": "Fitnesspause",
+        "task": "Mache 20 Kniebeugen."
+    },
+    {
+        "title": "Becher-Balance",
+        "task": "Balanciere einen Becher 10 Sekunden lang auf deinem Kopf.",
+        "timer": 10
+    },
+    {
+        "title": "Namenkette",
+        "task": "Nenne 2 Personen aus der Runde rückwärts."
+    },
+    {
+        "title": "Freestyle-Dichter",
+        "task": "Reime spontan zu einem Thema, das die Gruppe wählt."
+    },
+    {
+        "title": "Spaghetti-Macher",
+        "task": "Leg eine rohe Nudel (Form deiner Wahl) in ein Getränk und lass es drinnen."
+    },
+    {
+        "title": "Schluck für die Gruppe",
+        "task": "Jeder nimmt einen Schluck, natürlich außer dir."
+    },
+    {
+        "title": "Truth or Dare",
+        "task": "Stelle einer Person eine Frage oder fordere sie zu etwas auf."
+    },
+    {
+        "title": "Selfie-Streit",
+        "task": "Mache ein Selfie mit der Person, die du am wenigsten kennst."
+    },
+    {
+        "title": "Koch-Tutorial",
+        "task": "Erkläre, wie man Nudeln mit Pesto zubereitet – Schritt für Schritt."
+    },
+    {
+        "title": "Mumien-Spiel",
+        "task": "Lasse dich mit Klopapier einwickeln."
+    },
+    {
+        "title": "Superheld-Name",
+        "task": "Gib allen Anwesenden einen Superheldennamen."
+    },
+    {
+        "title": "Eiskalter Shot",
+        "task": "Trinke draußen einen Shot."
+    },
+    {
+        "title": "Hände Hoch",
+        "task": "Beide Arme 5 Minuten lang in die Luft.",
+        "timer": 300
+    },
+    {
+        "title": "Bier-Meditation",
+        "task": "Starre meditativ 1 Minute lang auf dein Getränk.",
+        "timer": 60
+    },
+    {
+        "title": "Tier-Party",
+        "task": "Mach das Geräusch deines Lieblingstiers."
+    },
+    {
+        "title": "Sitzverbot",
+        "task": "Stehe für die nächsten 5 Minuten.",
+        "timer": 300
+    },
+    {
+        "title": "Gruppenanführer",
+        "task": "Leite die Gruppe für 2 Minuten bei Sportübungen an.",
+        "timer": 120
+    },
+    {
+        "title": "Würfelwurf",
+        "task": "Würfle: Gerade Zahl = du trinkst, ungerade Zahl = die anderen trinken."
+    },
+    {
+        "title": "Zeitschätz-Spiel",
+        "task": "Schätze 1 Minute ohne Uhr.",
+        "timer": 60
+    },
+    {
+        "title": "Rückwärts sprechen",
+        "task": "Sage „Ich liebe dieses Spiel“ rückwärts."
+    },
+    {
+        "title": "Hütchenspiel",
+        "task": "Verstecke einen Gegenstand im Raum; die Gruppe muss suchen."
+    },
+    {
+        "title": "Monsterstimme",
+        "task": "Sprich wie ein Monster für die nächsten 2 Runden.",
+        "timer": 120
+    },
+    {
+        "title": "Schluck in Ehren",
+        "task": "Trinke aus einem Glas deiner Wahl."
+    },
+    {
+        "title": "Versteck-Spiel",
+        "task": "Verstecke dich für 1 Minute im Raum.",
+        "timer": 60
+    },
+    {
+        "title": "Pantomime-Profi",
+        "task": "Stelle ein bekanntes Tier pantomimisch dar."
+    },
+    {
+        "title": "Lieblingssong-Show",
+        "task": "Singe den Refrain deines Lieblingsliedes laut vor."
+    },
+    {
+        "title": "Witziger Tänzer",
+        "task": "Tanze wie ein Roboter für 30 Sekunden.",
+        "timer": 30
+    },
+    {
+        "title": "Mund-Zeichner",
+        "task": "Zeichne mit deinem Mund einen Smiley auf ein Stück Papier."
+    },
+    {
+        "title": "Prost-Künstler",
+        "task": "Sage „Prost“ auf 5 verschiedene Arten."
+    },
+    {
+        "title": "Buddy-System",
+        "task": "Umarme jemanden in der Runde für 10 Sekunden.",
+        "timer": 10
+    },
+    {
+        "title": "Bauchredner",
+        "task": "Sprich, ohne dabei die Lippen zu bewegen."
+    },
+    {
+        "title": "Löffeltanz",
+        "task": "Halte einen Löffel zwischen deinen Zähnen und tanze."
+    },
+    {
+        "title": "Erfinder-Modus",
+        "task": "Erfinde ein neues Wort und erkläre, was es bedeutet."
+    },
+    {
+        "title": "Gruppen-DJ",
+        "task": "Lege ein Lied ein und tanze dazu."
+    },
+    {
+        "title": "Postkarten-Spiel",
+        "task": "Beschreibe spontan einen Urlaub von dir."
+    },
+    {
+        "title": "Kopfdreh-Challenge",
+        "task": "Drehe deinen Kopf komplett im Kreis – langsam."
+    },
+    {
+        "title": "Bananentelefon",
+        "task": "Telefoniere eine Minute lang mit einer Banane bzw. Obst deiner Wahl.",
+        "timer": 60
+    },
+    {
+        "title": "Schlürf-Challenge",
+        "task": "Trinke dein Getränk so laut wie möglich."
+    },
+    {
+        "title": "Platzwechsel",
+        "task": "Tausche deinen Platz mit einer Person."
+    },
+    {
+        "title": "Gruppenfoto",
+        "task": "Macht zusammen ein Gruppenfoto und postet es später als Erinnerung."
+    },
+    {
+        "title": "Teufelskreis",
+        "task": "Der Nächste muss seine Aufgabe doppelt machen."
+    },
+    {
+        "title": "Impro-Song",
+        "task": "Singe spontan ein Lied über die Gruppe."
+    },
+    {
+        "title": "Gartenparty",
+        "task": "Hole einen Gegenstand von draußen, ohne zu reden."
+    },
+    {
+        "title": "Kopfrechnen",
+        "task": "Löse eine kleine Matheaufgabe, die jemand stellt."
+    },
+    {
+        "title": "Würfeltrick",
+        "task": "Wirf einen Würfel: 1-3 du trinkst, 4-6 die anderen trinken."
+    },
+    {
+        "title": "Blind-Artist",
+        "task": "Zeichne etwas mit verbundenen Augen und lass die Gruppe raten."
+    },
+    {
+        "title": "Akzent-Challenge",
+        "task": "Sprich eine Runde lang mit einem ausländischen Akzent."
+    },
+    {
+        "title": "Tier-Raten",
+        "task": "Mache ein Tiergeräusch, die Gruppe muss raten welches."
+    },
+    {
+        "title": "Tanzbattle",
+        "task": "Tanze 30 Sekunden gegen deinen linken Nachbarn. Der rechte Nachbar wählt den Song aus",
+        "timer": 30
+    },
+    {
+        "title": "Elefant",
+        "task": "Mach einen Rüssel und trinke einen Schluck."
+    },
+    {
+        "title": "#nofilter",
+        "task": "Mache ein Selfie der ausschaut als würdest du einen lustigen Snapchat Filter verwenden."
+    },
+    {
+        "title": "Spiegel-Challenge",
+        "task": "Imitiere die Bewegungen einer der Person links neben dir für 1 Minute.",
+        "timer": 60
+    },
+    {
+        "title": "Gedankenleser",
+        "task": "Errate, was die nächste Person gerade denkt."
+    },
+    {
+        "title": "Richtungswechsel",
+        "task": "Ab jetzt geht es in die andere Richtung"
+    },
+    {
+        "title": "Richtungswechsel",
+        "task": "Ab jetzt geht es in die andere Richtung"
+    },
+    {
+        "title": "Rudel-Brüllen",
+        "task": "Alle schreien gleichzeitig ein zufälliges Wort."
+    },
+    {
+        "title": "Rocky Balboa",
+        "task": "Boxe 30 Sekunden lang in die Luft.",
+        "timer": 30
+    },
+    {
+        "title": "Lachverbot",
+        "task": "Du darfst eine Runde lang nicht lachen."
+    },
+    {
+        "title": "Finger-Malen",
+        "task": "Male ein Smiley auf dein Gesicht mit deinem Finger."
+    },
+    {
+        "title": "Rate-Spiel",
+        "task": "Lass dir die Augen verbinden und errate einen Gegenstand."
+    },
+    {
+        "title": "Pose-Meister",
+        "task": "Halte eine lustige Pose für 30 Sekunden.",
+        "timer": 30
+    },
+    {
+        "title": "Luft-Schwimmer",
+        "task": "Tue so, als würdest du schwimmen – für 20 Sekunden.",
+        "timer": 20
+    },
+    {
+        "title": "Fake-Weinen",
+        "task": "Fange an zu weinen – so realistisch wie möglich."
+    },
+    {
+        "title": "Sprachen-Talent",
+        "task": "Zähle bis 10 in einer fremden Sprache deiner Wahl."
+    },
+    {
+        "title": "Maskenball",
+        "task": "Verwende einen Gegenstand als improvisierte Maske für eine Runde."
+    },
+    {
+        "title": "Verrückte Frisur",
+        "task": "Style deine Haare um."
+    },
+    {
+        "title": "Superkraft",
+        "task": "Welches ist eine Superkraft, die du gerne hättest."
+    },
+    {
+        "title": "Schlürf-Duell",
+        "task": "Wer trinkt schneller den Drink aus? Du oder die Person rechts von dir?"
+    },
+    {
+        "title": "Kuschel-Objekt",
+        "task": "Kuschel für eine Minute mit einem Gegenstand.",
+        "timer": 60
+    },
+    {
+        "title": "Sicherheitsrunde",
+        "task": "Setze dich für eine Runde auf den Boden."
+    }
 ]
