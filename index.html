@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zufallsaufgaben Generator</title>
+    <title>Fun Generator</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -57,7 +57,6 @@
 </head>
 <body>
     <div class="container">
-        
         <div class="title" id="title">Fun Generator</div>
         <p class="task" id="task">Hier wird die Aufgabe angezeigt.</p>
         <p id="timer"></p>
@@ -97,12 +96,10 @@
         }
 
         function startTimerManually() {
-            const timerElement = document.getElementById("timer");
             if (remainingTime > 0) {
-                timerElement.textContent = `Zeit: ${remainingTime} Sekunden`;
-                isPaused = false;
+                startTimer(remainingTime);
             } else {
-                timerElement.textContent = "Kein Timer gesetzt.";
+                document.getElementById("timer").textContent = "Kein Timer gesetzt.";
             }
         }
 
@@ -111,6 +108,11 @@
         }
 
         async function generateTask() {
+            clearInterval(timerInterval); // Timer zurücksetzen
+            isPaused = false;
+            remainingTime = 0;
+            document.getElementById("timer").textContent = "";
+
             const tasks = await fetchTasks();
             const randomIndex = Math.floor(Math.random() * tasks.length);
             const selectedTask = tasks[randomIndex];
@@ -121,11 +123,6 @@
             if (selectedTask.timer) {
                 remainingTime = selectedTask.timer;
                 document.getElementById("timer").textContent = `Zeit: ${remainingTime} Sekunden`;
-                clearInterval(timerInterval);
-            } else {
-                document.getElementById("timer").textContent = ""; // Timer-Bereich leeren
-                clearInterval(timerInterval);
-                remainingTime = 0;
             }
         }
     </script>
