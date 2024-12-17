@@ -46,7 +46,7 @@
             font-size: 1.5em;
             cursor: pointer;
             margin: 5px;
-            color: #007BFF; /* Immer sichtbar */
+            color: #007BFF; /* Sichtbar bei Bedarf */
             transition: color 0.3s;
         }
         .icon-button:hover {
@@ -68,13 +68,14 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="title" id="title">Gleich geht's los!</div>
         <p class="task" id="task"></p>
         <p id="timer"></p>
         <button onclick="generateTask()">Neue Aufgabe</button>
-        <button class="icon-button" onclick="toggleTimer()" id="timerControl">⏯</button>
+        <button class="icon-button" onclick="toggleTimer()" id="timerControl" style="display: none;">⏯</button>
     </div>
 
     <script>
@@ -102,7 +103,7 @@
                     if (remainingTime <= 0) {
                         clearInterval(timerInterval);
                         timerElement.textContent = "Zeit abgelaufen!";
-                        timerControl.style.display = "none";
+                        hideTimerControls();
                     }
                 }
             }, 1000);
@@ -120,13 +121,17 @@
             }
         }
 
+        function hideTimerControls() {
+            clearInterval(timerInterval);
+            timerElement.style.display = "none";
+            timerControl.style.display = "none";
+        }
+
         async function generateTask() {
-            clearInterval(timerInterval); // Timer zurücksetzen
+            hideTimerControls(); // Timer stoppen und ausblenden
             isPaused = true;
             remainingTime = 0;
             timerElement.textContent = "";
-            timerElement.style.display = "none";
-            timerControl.style.display = "none";
 
             const tasks = await fetchTasks();
             const randomIndex = Math.floor(Math.random() * tasks.length);
@@ -139,6 +144,7 @@
                 remainingTime = selectedTask.timer;
                 updateTimerDisplay();
                 timerControl.style.display = "inline-block"; // Timer-Button anzeigen
+                timerElement.style.display = "block";
             }
         }
     </script>
