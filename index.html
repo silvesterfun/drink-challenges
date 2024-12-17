@@ -6,76 +6,90 @@
     <title>Zufallsaufgaben Generator</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            background-color: #f4f4f9;
+            background: linear-gradient(135deg, #6dd5ed, #2193b0);
+            color: #333;
             margin: 0;
             padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .container {
-            margin: 50px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 600px;
+            margin: 20px;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .container:hover {
+            transform: scale(1.02);
         }
         h1 {
-            color: #333;
+            font-size: 2em;
+            color: #444;
         }
         .title {
             font-size: 1.8em;
             font-weight: bold;
             margin: 20px 0 10px 0;
+            color: #007BFF;
         }
         .task {
             font-size: 1.2em;
-            margin: 10px 0;
+            margin: 15px 0;
             color: #555;
         }
         #timer {
-            font-size: 1.2em;
-            color: red;
-            margin: 10px 0;
-            display: none; /* Versteckt, bis Timer relevant ist */
+            font-size: 1.3em;
+            color: #e63946;
+            margin: 15px 0;
+            font-weight: bold;
         }
         .button-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        .icon-button {
-            background: #007BFF;
-            border: none;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 1em;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .icon-button:hover {
-            background: #0056b3;
+            gap: 15px;
+            margin-top: 20px;
         }
         button {
             background: #007BFF;
             color: #fff;
             border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 12px 24px;
+            border-radius: 25px;
             font-size: 1em;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: background 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
         }
         button:hover {
             background: #0056b3;
+            transform: scale(1.05);
+        }
+        .icon-button {
+            background: #ff6b6b;
+            color: #fff;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+        .icon-button:hover {
+            background: #d84343;
+            transform: scale(1.05);
         }
     </style>
 </head>
-
 <body>
     <div class="container">
         <div class="title" id="title">Gleich geht's los!</div>
@@ -103,7 +117,7 @@
             clearInterval(timerInterval);
             isPaused = false;
             timerControl.textContent = "⏸";
-            timerElement.style.display = "block"; // Timer sichtbar machen
+            timerElement.style.display = "block";
             timerInterval = setInterval(() => {
                 if (!isPaused) {
                     remainingTime--;
@@ -132,13 +146,13 @@
 
         function hideTimerControls() {
             clearInterval(timerInterval);
-            timerInterval = null; // Sicherstellen, dass kein Timer mehr läuft
+            timerInterval = null;
             timerElement.style.display = "none";
             timerControl.style.display = "none";
         }
 
         async function generateTask() {
-            hideTimerControls(); // Timer stoppen und ausblenden
+            hideTimerControls();
             isPaused = true;
             remainingTime = 0;
             timerElement.textContent = "";
@@ -153,7 +167,7 @@
             if (selectedTask.timer) {
                 remainingTime = selectedTask.timer;
                 updateTimerDisplay();
-                timerControl.style.display = "inline-block"; // Timer-Button anzeigen
+                timerControl.style.display = "inline-block";
                 timerElement.style.display = "block";
             } else {
                 remainingTime = 0;
