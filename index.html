@@ -91,7 +91,7 @@
         }
 
         function startTimer() {
-            clearInterval(timerInterval); // Vorherigen Timer löschen
+            clearInterval(timerInterval);
             isPaused = false;
             timerControl.textContent = "⏸";
             timerElement.style.display = "block"; // Timer sichtbar machen
@@ -145,9 +145,13 @@
                 updateTimerDisplay();
                 timerControl.style.display = "inline-block"; // Timer-Button anzeigen
                 timerElement.style.display = "block";
+            } else {
+                remainingTime = 0;
+                timerElement.textContent = "";
+                timerElement.style.display = "none";
+                timerControl.style.display = "none";
             }
         }
     </script>
 </body>
 </html>
-
