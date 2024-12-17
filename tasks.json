@@ -492,5 +492,144 @@
     {
         "title": "Sicherheitsrunde",
         "task": "Setze dich für eine Runde auf den Boden."
+    },
+    {
+        "title": "Personalpronomen-Verbot",
+        "task": "Verzichte bis zum Ende des Spiels auf Personalpronomen (ich, du, er, sie, etc.)."
+    },
+    {
+        "title": "Körperalphabet",
+        "task": "Forme einen Buchstaben mit deinem Körper, die Gruppe muss ihn erraten in 20 Sekunden.",
+        "timer": 20
+    },
+    {
+        "title": "Reise nach Jerusalem",
+        "task": "Tausche deinen Platz mit der Person gegenüber."
+    },
+    {
+        "title": "Kunstpause",
+        "task": "Starre eine Runde lang in die Luft, ohne etwas zu sagen oder zu tun.",
+        "timer": 60
+    },
+    {
+        "title": "2er-Trinkrunde",
+        "task": "Wähle zwei Mitspieler, die einen Schluck trinken müssen."
+    },
+    {
+        "title": "Futterneid",
+        "task": "Lasse zwei Mitspieler ihre Drinks miteinander tauschen."
+    },
+    {
+        "title": "Linker Nachbar",
+        "task": "Der linke Mitspieler muss einen Schluck trinken."
+    },
+    {
+        "title": "Rechter Nachbar",
+        "task": "Der rechte Mitspieler muss einen Schluck trinken."
+    },
+    {
+        "title": "Männer-Runde",
+        "task": "Alle männlichen Mitspieler nehmen einen Schluck."
+    },
+    {
+        "title": "Frauen-Runde",
+        "task": "Alle weiblichen Mitspieler nehmen einen Schluck."
+    },
+    {
+        "title": "Gruppenzwang",
+        "task": "Alle Mitspieler trinken gleichzeitig einen Schluck."
+    },
+    {
+        "title": "Doppel-Drink",
+        "task": "Wähle zwei Personen, die abwechselnd einen Schluck trinken müssen bis ihr Drink leer ist."
+    },
+    {
+        "title": "Bullseye!",
+        "task": "Bestimme eine Person, die einen Schluck trinken muss, ohne zu begründen."
+    },
+    {
+        "title": "Regenbogen",
+        "task": "Jeder in der Runde trinkt nacheinander einen Schluck."
+    },
+    {
+        "title": "New Life",
+        "task": "Tausche deinen Platz und deine Identität mit einem Spieler deiner Wahl."
+    },
+    {
+        "title": "Joker",
+        "task": "Du darfst auf eine Aufgabe verzichten."
+    },
+    {
+        "title": "Ehrenmann",
+        "task": "Gönne deinem Sitznachbarn links einen Schluck aus deinem Glas."
+    },
+    {
+        "title": "Synchrontrinken",
+        "task": "Trinke gleichzeitig mit einer anderen Person."
+    },
+    {
+        "title": "Getränkewahl",
+        "task": "Bestimme für deinen rechten Nachbarn, was er trinken darf."
+    },
+    {
+        "title": "Wasserpause",
+        "task": "Trinke einen großen Schluck Wasser."
+    },
+    {
+        "title": "Wasserpause",
+        "task": "Trinke einen großen Schluck Wasser."
+    },
+    {
+        "title": "Wasserpause",
+        "task": "Trinke einen großen Schluck Wasser."
+    },
+    {
+        "title": "Wasserpause",
+        "task": "Trinke einen großen Schluck Wasser."
+    },
+    {
+        "title": "Wasserpause",
+        "task": "Trinke einen großen Schluck Wasser."
+    },
+    {
+        "title": "Kompliment-Runde",
+        "task": "Sage deinem Nachbarn etwas Nettes."
+    },
+    {
+        "title": "Gedächtnistraining",
+        "task": "Nenne alle Namen der Runde."
+    },
+    {
+        "title": "Vorleserunde",
+        "task": "Lies etwas aus einem Buch oder von deinem Handy vor."
+    },
+    {
+        "title": "Sprachen-Test",
+        "task": "Sage 'Hallo' in 5 verschiedenen Sprachen."
+    },
+    {
+        "title": "Fitness-Session",
+        "task": "Mache 10 Hampelmänner."
+    },
+    {
+        "title": "Schreib-Handwechsel",
+        "task": "Schreibe deinen Namen mit deiner ungewohnten Hand."
+    },
+    {
+        "title": "Selfie-Time",
+        "task": "Mache ein kreatives Selfie mit der Gruppe."
+    },
+    {
+        "title": "Umarmungsrunde",
+        "task": "Umarme reihum alle in der Runde."
+    },
+    {
+        "title": "Gedankenreise",
+        "task": "Beschreibe deinen Traumurlaub in 3 Sätzen."
+    },
+    {
+        "title": "Gleichgewichtstest",
+        "task": "Stehe auf einem Bein für 20 Sekunden.",
+        "timer": 20
     }
 ]
