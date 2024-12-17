@@ -46,10 +46,11 @@
             font-size: 1.5em;
             cursor: pointer;
             margin: 5px;
+            color: #007BFF; /* Immer sichtbar */
             transition: color 0.3s;
         }
         .icon-button:hover {
-            color: #007BFF;
+            color: #0056b3;
         }
         button {
             background: #007BFF;
@@ -79,7 +80,7 @@
     <script>
         let timerInterval;
         let remainingTime = 0;
-        let isPaused = false;
+        let isPaused = true;
         const timerElement = document.getElementById("timer");
         const timerControl = document.getElementById("timerControl");
 
@@ -88,14 +89,11 @@
             return response.json();
         }
 
-        function startTimer(seconds) {
+        function startTimer() {
             clearInterval(timerInterval); // Vorherigen Timer löschen
-            remainingTime = seconds;
             isPaused = false;
-            timerElement.style.display = "block"; // Timer sichtbar machen
-            updateTimerDisplay();
             timerControl.textContent = "⏸";
-
+            timerElement.style.display = "block"; // Timer sichtbar machen
             timerInterval = setInterval(() => {
                 if (!isPaused) {
                     remainingTime--;
@@ -118,15 +116,16 @@
             if (remainingTime > 0) {
                 isPaused = !isPaused;
                 timerControl.textContent = isPaused ? "▶" : "⏸";
+                if (!isPaused && !timerInterval) startTimer();
             }
         }
 
         async function generateTask() {
             clearInterval(timerInterval); // Timer zurücksetzen
-            isPaused = false;
+            isPaused = true;
             remainingTime = 0;
             timerElement.textContent = "";
-            timerElement.style.display = "none"; // Timer verstecken
+            timerElement.style.display = "none";
             timerControl.style.display = "none";
 
             const tasks = await fetchTasks();
@@ -137,10 +136,12 @@
             document.getElementById("task").textContent = selectedTask.task;
 
             if (selectedTask.timer) {
-                startTimer(selectedTask.timer);
-                timerControl.style.display = "inline-block"; // Timer-Steuerung anzeigen
+                remainingTime = selectedTask.timer;
+                updateTimerDisplay();
+                timerControl.style.display = "inline-block"; // Timer-Button anzeigen
             }
         }
     </script>
 </body>
 </html>
+
