@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spielspass mit Aufgaben</title>
+    <title>Zufallsaufgaben Generator</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -47,6 +47,7 @@
             border-radius: 5px;
             font-size: 1em;
             cursor: pointer;
+            margin: 5px;
             transition: background 0.3s;
         }
         button:hover {
@@ -56,15 +57,19 @@
 </head>
 <body>
     <div class="container">
-        <h1>Fun Generator</h1>
-        <div class="title" id="title">Klicke auf den Button, um einen Titel zu starten!</div>
+        
+        <div class="title" id="title">Fun Generator</div>
         <p class="task" id="task">Hier wird die Aufgabe angezeigt.</p>
         <p id="timer"></p>
-        <button onclick="generateTask()">Los geht's</button>
+        <button onclick="generateTask()">Neue Aufgabe anzeigen</button>
+        <button onclick="startTimerManually()">Timer starten</button>
+        <button onclick="pauseTimer()">Timer pausieren</button>
     </div>
 
     <script>
         let timerInterval;
+        let remainingTime = 0;
+        let isPaused = false;
 
         async function fetchTasks() {
             const response = await fetch('tasks.json');
@@ -74,17 +79,35 @@
         function startTimer(seconds) {
             clearInterval(timerInterval); // Vorherigen Timer löschen
             const timerElement = document.getElementById("timer");
-            timerElement.textContent = `Zeit: ${seconds} Sekunden`;
+            remainingTime = seconds;
+            isPaused = false;
+            timerElement.textContent = `Zeit: ${remainingTime} Sekunden`;
 
             timerInterval = setInterval(() => {
-                seconds--;
-                timerElement.textContent = `Zeit: ${seconds} Sekunden`;
+                if (!isPaused) {
+                    remainingTime--;
+                    timerElement.textContent = `Zeit: ${remainingTime} Sekunden`;
 
-                if (seconds <= 0) {
-                    clearInterval(timerInterval);
-                    timerElement.textContent = "Zeit abgelaufen!";
+                    if (remainingTime <= 0) {
+                        clearInterval(timerInterval);
+                        timerElement.textContent = "Zeit abgelaufen!";
+                    }
                 }
             }, 1000);
+        }
+
+        function startTimerManually() {
+            const timerElement = document.getElementById("timer");
+            if (remainingTime > 0) {
+                timerElement.textContent = `Zeit: ${remainingTime} Sekunden`;
+                isPaused = false;
+            } else {
+                timerElement.textContent = "Kein Timer gesetzt.";
+            }
+        }
+
+        function pauseTimer() {
+            isPaused = !isPaused;
         }
 
         async function generateTask() {
@@ -96,9 +119,13 @@
             document.getElementById("task").textContent = selectedTask.task;
 
             if (selectedTask.timer) {
-                startTimer(selectedTask.timer);
+                remainingTime = selectedTask.timer;
+                document.getElementById("timer").textContent = `Zeit: ${remainingTime} Sekunden`;
+                clearInterval(timerInterval);
             } else {
                 document.getElementById("timer").textContent = ""; // Timer-Bereich leeren
+                clearInterval(timerInterval);
+                remainingTime = 0;
             }
         }
     </script>
